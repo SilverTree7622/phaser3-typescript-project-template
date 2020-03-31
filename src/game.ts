@@ -7,7 +7,7 @@ export default class Demo extends Phaser.Scene
         super('demo');
     }
 
-    preload ()
+    public preload ()
     {
         this.load.image('logo', 'assets/phaser3-logo.png');
         this.load.image('libs', 'assets/libs.png');
@@ -15,7 +15,7 @@ export default class Demo extends Phaser.Scene
         this.load.glsl('stars', 'assets/starfields.glsl.js');
     }
 
-    create ()
+    public create ()
     {
         this.add.shader('RGB Shift Field', 0, 0, 800, 600).setOrigin(0);
 
@@ -36,7 +36,7 @@ export default class Demo extends Phaser.Scene
     }
 }
 
-const config = {
+const config: object = {
     type: Phaser.AUTO,
     backgroundColor: '#125555',
     width: 800,
